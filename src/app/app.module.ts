@@ -10,11 +10,35 @@ import {LoginComponent} from './login/login.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {RouterModule, Routes} from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { PeopleComponent } from './people/people.component';
+import {Masonry, MasonryModule} from '@thisissoon/angular-masonry';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'registration', component: RegistrationComponent}
+  { path: '', component: AppComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent,
+        children: [
+          {
+            path: '',
+            component: WelcomeComponent
+          },
+          {
+            path: 'login',
+            component: LoginComponent
+          },
+          {
+            path: 'registration',
+            component: RegistrationComponent
+          }]
+      }]
+  }
+];
+
+const masonryProviders = [
+  { provide: Masonry, useFactory: () => window['Masonry'] }
 ];
 
 @NgModule({
@@ -25,14 +49,17 @@ const routes: Routes = [
     SidebarComponent,
     LoginComponent,
     RegistrationComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HomeComponent,
+    PeopleComponent
   ],
   imports: [
     BrowserModule,
     LeafletModule.forRoot(),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MasonryModule.forRoot(masonryProviders)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [PeopleComponent]
 })
 export class AppModule { }

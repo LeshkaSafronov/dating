@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.grid {
+  margin: 0 auto;
+}
+
+.grid-card {
+  display: inline-block;
+  margin-bottom: 1rem;
+  width: 18rem;
+}
+
+.waiting {
+  text-align: center;
+}

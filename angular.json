@@ -33,7 +33,8 @@
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
-              "./semantic-ui/semantic.js"
+              "./semantic-ui/semantic.js",
+              "./node_modules/masonry-layout/dist/masonry.pkgd.js"
             ]
           },
           "configurations": {
