@@ -32,13 +32,6 @@ export class MapComponent implements OnInit {
         iconUrl: 'https://pp.userapi.com/c626325/v626325794/1e3e6/sItGU2UGOKU.jpg',
         className: 'ui medium circular image'
       })
-    }),
-    marker([ 41.879966, -131.726909 ], {
-      icon: icon({
-        iconSize: [ 60, 60 ],
-        iconUrl: 'https://pp.userapi.com/c631318/v631318897/d4d0/03ctBf6Kh90.jpg',
-        className: 'ui medium circular image'
-      })
     })
   ];
 
