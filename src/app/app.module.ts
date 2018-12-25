@@ -15,6 +15,8 @@ import { PeopleComponent } from './people/people.component';
 import {Masonry, MasonryModule} from '@thisissoon/angular-masonry';
 import { MessagesComponent } from './messages/messages.component';
 import { ChatComponent } from './chat/chat.component';
+import { FriendsComponent } from './friends/friends.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -47,6 +49,14 @@ const routes: Routes = [
       {
         path: 'chat',
         component: ChatComponent
+      },
+      {
+        path: 'friends',
+        component: FriendsComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
       }]
   }
 ];
@@ -67,7 +77,9 @@ const masonryProviders = [
     HomeComponent,
     PeopleComponent,
     MessagesComponent,
-    ChatComponent
+    ChatComponent,
+    FriendsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

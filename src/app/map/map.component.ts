@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {circle, icon, latLng, marker, polygon, tileLayer} from 'leaflet';
+import {Component, OnInit} from '@angular/core';
+import {icon, latLng, marker, tileLayer} from 'leaflet';
 
 @Component({
   selector: 'app-map',
@@ -17,8 +17,6 @@ export class MapComponent implements OnInit {
   };
 
   layers = [
-    circle([ 46.95, -122 ], { radius: 5000 }),
-    polygon([[ 46.8, -121.85 ], [ 46.92, -121.92 ], [ 46.87, -121.8 ]]),
     marker([ 46.879966, -121.726909 ], {
       icon: icon({
         iconSize: [ 60, 60 ],
