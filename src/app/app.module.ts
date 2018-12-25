@@ -18,6 +18,7 @@ import { ChatComponent } from './chat/chat.component';
 import { FriendsComponent } from './friends/friends.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PhotoComponent } from './photo/photo.component';
+import { PhotosComponent } from './photos/photos.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -62,6 +63,10 @@ const routes: Routes = [
       {
         path: 'photo',
         component: PhotoComponent
+      },
+      {
+        path: 'photos',
+        component: PhotosComponent
       }]
   }
 ];
@@ -85,7 +90,8 @@ const masonryProviders = [
     ChatComponent,
     FriendsComponent,
     ProfileComponent,
-    PhotoComponent
+    PhotoComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
