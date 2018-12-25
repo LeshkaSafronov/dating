@@ -13,6 +13,8 @@ import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PeopleComponent } from './people/people.component';
 import {Masonry, MasonryModule} from '@thisissoon/angular-masonry';
+import { MessagesComponent } from './messages/messages.component';
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -33,6 +35,18 @@ const routes: Routes = [
             path: 'registration',
             component: RegistrationComponent
           }]
+      },
+      {
+        path: 'messages',
+        component: MessagesComponent
+      },
+      {
+        path: 'people',
+        component: PeopleComponent
+      },
+      {
+        path: 'chat',
+        component: ChatComponent
       }]
   }
 ];
@@ -51,7 +65,9 @@ const masonryProviders = [
     RegistrationComponent,
     WelcomeComponent,
     HomeComponent,
-    PeopleComponent
+    PeopleComponent,
+    MessagesComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +76,6 @@ const masonryProviders = [
     MasonryModule.forRoot(masonryProviders)
   ],
   providers: [],
-  bootstrap: [PeopleComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

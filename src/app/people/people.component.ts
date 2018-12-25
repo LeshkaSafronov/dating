@@ -24,8 +24,6 @@ export class PeopleComponent implements AfterViewInit, OnDestroy {
       fitWidth: true
     };
     this.masonryInstance = new this.masonry(this.grid.nativeElement, options);
-    console.log(this.masonryInstance);
-
   }
 
   layout() {
