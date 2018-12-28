@@ -8,10 +8,13 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.transaction.Transactional;
+
+import java.security.Principal;
+import java.util.Optional;
 
 import static org.springframework.security.web.context.HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY;
 
@@ -47,5 +50,10 @@ public class UserService {
     public User register(User user, String password) {
         user.setEncryptedPassword(passwordEncoder.encode(password));
         return repository.save(user);
+    }
+
+    @Transactional(readOnly = true)
+    public Optional<User> getMe(Principal principal) {
+        return repository.findByEmail(principal.getName());
     }
 }
