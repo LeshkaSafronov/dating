@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {icon, latLng, marker, tileLayer} from 'leaflet';
+import {Photo} from '../photo';
 
 @Component({
   selector: 'app-profile',
@@ -26,6 +27,11 @@ export class ProfileComponent implements OnInit {
       })
     })
   ];
+
+  photos: Photo[] = [
+    new Photo('Женя', 'Гусаковская', 'https://pp.userapi.com/c630724/v630724827/3ef15/gycKaQ24uEo.jpg', 'https://pp.userapi.com/c627925/v627925827/2cd5f/ePoB3eeM98g.jpg', 1, 15, '2h'),
+    new Photo('Женя', 'Гусаковская', 'https://pp.userapi.com/c630724/v630724827/3ef15/gycKaQ24uEo.jpg', 'https://pp.userapi.com/c630724/v630724827/3ef15/gycKaQ24uEo.jpg', 1, 4, '2h')
+  ]
 
   constructor() { }
 

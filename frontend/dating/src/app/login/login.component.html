@@ -1,24 +1,20 @@
-<div class="container login-container outer">
+<form class="container login-container outer">
   <div class="middle">
     <div class="col-md-4 login-form-2 inner">
       <h3>Login</h3>
       <form>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Your Email *" value="" />
+          <input type="text" class="form-control" placeholder="Your Email *" value="" name="email" [(ngModel)]="model.email">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Your Password *" value="" />
+          <input type="password" class="form-control" placeholder="Your Password *" value="" name="password" [(ngModel)]="model.password"/>
         </div>
 
         <div class="form-group">
-          <button class="ui green button">Login</button>
+          <button class="ui green button" [routerLink]="['/people']">Login</button>
           <button class="ui button" [routerLink]="['']">Back</button>
-        </div>
-
-        <div class="form-group">
-          <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
         </div>
       </form>
     </div>
   </div>
-</div>
+</form>

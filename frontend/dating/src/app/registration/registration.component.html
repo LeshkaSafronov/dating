@@ -1,20 +1,23 @@
-<div class="container login-container outer">
+<form class="container login-container outer">
   <div class="middle">
     <div class="col-md-4 login-form-2 inner">
       <h3>Registration</h3>
       <form>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Your Email *" value="" />
+          <input type="email" class="form-control" placeholder="Your Email *" value="" />
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Your Password *" value="" />
         </div>
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Your First Name *" value="" />
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Your Last Name *" value="" />
+          <input type="text" class="form-control" placeholder="Your Last Name *" value="" />
         </div>
 
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Your Age *" value="" />
+          <input type="number" class="form-control" placeholder="Your Age *" value="" />
         </div>
 
         <div class="ui form form-group">
@@ -35,11 +38,11 @@
         </div>
         <div class="form-group">
           <div class="form-group">
-            <button class="ui green button">Sing up</button>
+            <button class="ui green button" [routerLink]="['']">Sing up</button>
             <button class="ui button" [routerLink]="['']">Back</button>
           </div>
         </div>
       </form>
     </div>
   </div>
-</div>
+</form>

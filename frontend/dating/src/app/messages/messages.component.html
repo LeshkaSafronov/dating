@@ -1,53 +1,19 @@
 <app-header></app-header>
 <div class="ui comments" style="margin: auto; overflow-y: auto;">
-  <div class="comment">
+  <div class="comment" *ngFor="let message of messages">
     <a class="avatar">
-      <img src="https://semantic-ui.com/images/avatar/small/matt.jpg">
+      <img src="{{message.avatar}}">
     </a>
     <div class="content">
-      <a class="author">Matt</a>
+      <a class="author">{{message.firstName}} {{message.lastName}}</a>
       <div class="metadata">
-        <span class="date">Today at 5:42PM</span>
+        <span class="date">{{message.createdAt}}</span>
       </div>
       <div class="text">
-        How artistic!
+        {{message.message}}
       </div>
       <div class="actions">
-        <a class="reply">Reply</a>
-      </div>
-    </div>
-  </div>
-  <div class="comment">
-    <a class="avatar">
-      <img src="https://semantic-ui.com/images/avatar/small/elliot.jpg">
-    </a>
-    <div class="content">
-      <a class="author">Elliot Fu</a>
-      <div class="metadata">
-        <span class="date">Yesterday at 12:30AM</span>
-      </div>
-      <div class="text">
-        <p>This has been very useful for my research. Thanks as well!</p>
-      </div>
-      <div class="actions">
-        <a class="reply">Reply</a>
-      </div>
-    </div>
-  </div>
-  <div class="comment">
-    <a class="avatar">
-      <img src="https://semantic-ui.com/images/avatar/small/jenny.jpg">
-    </a>
-    <div class="content">
-      <a class="author">Joe Henderson</a>
-      <div class="metadata">
-        <span class="date">5 days ago</span>
-      </div>
-      <div class="text">
-        Dude, this is awesome. Thanks so much
-      </div>
-      <div class="actions">
-        <a class="reply">Reply</a>
+        <a class="reply" [routerLink]="['/chat']">Reply</a>
       </div>
     </div>
   </div>

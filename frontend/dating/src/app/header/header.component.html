@@ -1,14 +1,14 @@
-<div class="ui secondary  menu">
-  <a class="active item">
+<div class="ui secondary menu">
+  <a class="item" [routerLink]="['/people']" [routerLinkActive]="['active']">
     People
   </a>
-  <a class="item">
+  <a class="item" [routerLink]="['/messages']" [routerLinkActive]="['active']">
     Messages
   </a>
-  <a class="item">
+  <a class="item" [routerLink]="['/friends']" [routerLinkActive]="['active']">
     Friends
   </a>
-  <a class="item">
+  <a class="item" [routerLink]="['/photos']" [routerLinkActive]="['active']">
     Photos
   </a>
   <div class="right menu">
@@ -18,8 +18,8 @@
         <i class="search link icon"></i>
       </div>
     </div>
-    <div class="item">
-      <img class="ui avatar image" src="http://www.sobaka.ru/images/image/00/98/11/39/_normal.jpg">
+    <div class="item" [routerLink]="['/profile']">
+      <img class="ui avatar image" src="https://pp.userapi.com/c630724/v630724827/3ef15/gycKaQ24uEo.jpg">
       <span>Y. Husakouskaya</span>
     </div>
   </div>

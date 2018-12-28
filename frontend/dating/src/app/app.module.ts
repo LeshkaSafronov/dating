@@ -19,6 +19,8 @@ import { FriendsComponent } from './friends/friends.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PhotoComponent } from './photo/photo.component';
 import { PhotosComponent } from './photos/photos.component';
+import {FormsModule} from '@angular/forms';
+import { SecondProfileComponent } from './second-profile/second-profile.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent,
@@ -61,6 +63,10 @@ const routes: Routes = [
         component: ProfileComponent
       },
       {
+        path: 'second-profile',
+        component: SecondProfileComponent
+      },
+      {
         path: 'photo',
         component: PhotoComponent
       },
@@ -91,10 +97,12 @@ const masonryProviders = [
     FriendsComponent,
     ProfileComponent,
     PhotoComponent,
-    PhotosComponent
+    PhotosComponent,
+    SecondProfileComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     LeafletModule.forRoot(),
     RouterModule.forRoot(routes),
     MasonryModule.forRoot(masonryProviders)
